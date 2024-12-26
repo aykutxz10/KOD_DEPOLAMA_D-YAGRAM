@@ -1,0 +1,136 @@
+/* Genel stil ayarları */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f9;
+}
+
+/* Header */
+/* Header düzenlemesi */
+.header {
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start; /* Logo ve başlık sola hizalanacak */
+    gap: 20px; /* Logo ve başlık arasındaki mesafe */
+}
+
+/* Logo container düzenlemesi */
+.logo-container {
+    display: flex;
+    align-items: center;
+}
+
+/* Logo stilini küçült ve sola hizala */
+.logo {
+    width: 50px; /* Logo boyutu küçültülmüş */
+    height: auto;
+    margin-right: 15px; /* Logo ile başlık arasındaki mesafe */
+}
+
+/* Başlık stilleri */
+h1 {
+    font-size: 30px;
+    font-weight: bold;
+    margin: 0;
+    color: #fff;
+}
+
+/* Main container */
+.container {
+    display: flex;
+    margin: 20px;
+}
+
+/* Sol Menü */
+.left-sidebar {
+    width: 25%;
+    background-color: #282837;
+    padding: 20px;
+    color: white;
+    border-radius: 5px;
+}
+
+.left-sidebar .card {
+    background-color: #000000;
+    padding: 25px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+}
+
+.left-sidebar .card a {
+    color: rgb(255, 0, 0);
+    text-decoration: none;
+}
+
+.left-sidebar .card a:hover {
+    text-decoration: underline;
+}
+
+/* Yorumlar ve Dosyalar */
+.file-comments {
+    width: 70%;
+    padding: 20px;
+}
+
+.file-card {
+    background-color: white;
+    margin-bottom: 20px;
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+.file-card h3 {
+    margin-top: 0;
+}
+
+.file-card a {
+    color: #3498db;
+    text-decoration: none;
+}
+
+.file-card a:hover {
+    text-decoration: underline;
+}
+
+.file-card textarea {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    resize: vertical;
+}
+
+.file-card select {
+    padding: 5px;
+    border-radius: 5px;
+}
+
+.file-card button {
+    background-color: #3498db;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.file-card button:hover {
+    background-color: #2980b9;
+}
+
+/* Footer */
+.footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+}

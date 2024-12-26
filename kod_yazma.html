@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Online Kod Editörü</title>
+    <link rel="stylesheet" href="kod_yazma.css">  <!-- CSS dosyasını yükledik -->
+</head>
+<body>
+    <div class="editor-container">
+        <h1>Online Kod Editörü</h1>
+        
+        <div id="tabs">
+            <button class="tab-btn active" onclick="openTab('htmlTab')">HTML</button>
+            <button class="tab-btn" onclick="openTab('cssTab')">CSS</button>
+            <button class="tab-btn" onclick="openTab('phpTab')">PHP</button>
+            <button class="tab-btn" onclick="openTab('jsTab')">JavaScript</button>
+        </div>
+
+        <form action="index.php" method="POST">
+            <div id="htmlTab" class="tab-content active">
+                <h2>HTML Kodunu Yazın:</h2>
+                <textarea name="htmlCode" placeholder="HTML kodunuzu buraya yazın..."></textarea>
+            </div>
+            <div id="cssTab" class="tab-content">
+                <h2>CSS Kodunu Yazın:</h2>
+                <textarea name="cssCode" placeholder="CSS kodunuzu buraya yazın..."></textarea>
+            </div>
+            <div id="jsTab" class="tab-content">
+                <h2>JavaScript Kodunu Yazın:</h2>
+                <textarea name="jsCode" placeholder="JavaScript kodunuzu buraya yazın..."></textarea>
+            </div>
+            <div id="phpTab" class="tab-content">
+                <h2>PHP Kodunu Yazın:</h2>
+                <textarea name="phpCode" placeholder="PHP kodunuzu buraya yazın..."></textarea>
+            </div>
+
+            <div class="button-container">
+                <button type="submit">Kodu Kaydet</button>
+                <button type="button" onclick="runCode()">Kodu Çalıştır</button>
+            </div>
+        </form>
+
+        <!-- Kaydetme işlemi sonrası mesajı göster -->
+        <div class="message"></div>
+
+        <div class="output-container">
+            <div class="output-box">
+                <h2>Terminal Çıktısı:</h2>
+                <pre id="terminal"></pre>
+            </div>
+
+            <div class="output-box">
+                <h2>Çıktı :</h2>
+                <iframe id="output" src="about:blank"></iframe>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Sekme geçişini sağlamak için
+        function openTab(tabName) {
+            const tabs = document.querySelectorAll('.tab-content');
+            const tabButtons = document.querySelectorAll('.tab-btn');
+
+            // Tüm sekmeleri gizle
+            tabs.forEach(tab => tab.classList.remove('active'));
+
+            // Tüm sekme butonlarını deaktif yap
+            tabButtons.forEach(button => button.classList.remove('active'));
+
+            // Seçilen sekmeyi ve butonu aktif yap
+            document.getElementById(tabName).classList.add('active');
+            document.querySelector(`button[onclick="openTab('${tabName}')"]`).classList.add('active');
+        }
+
+        // Kodu çalıştırma fonksiyonu
+        function runCode() {
+            // HTML, CSS, JavaScript kodlarını al
+            let htmlCode = document.querySelector('textarea[name="htmlCode"]').value;
+            let cssCode = document.querySelector('textarea[name="cssCode"]').value;
+            let jsCode = document.querySelector('textarea[name="jsCode"]').value;
+
+            // Çıktıyı yazdıracağımız iframe'i al
+            let outputIframe = document.getElementById("output");
+            let outputDoc = outputIframe.contentDocument || outputIframe.contentWindow.document;
+
+            // Terminal kısmını temizle
+            let terminal = document.getElementById("terminal");
+            terminal.textContent = '';  // Terminali temizle
+
+            // HTML ve CSS kodunu iframe'e ekle
+            try {
+                outputDoc.open();
+                outputDoc.write(htmlCode + "<style>" + cssCode + "</style>");
+                outputDoc.close();
+            } catch (error) {
+                terminal.textContent += "HTML/CSS Hata: " + error.message + "\n";
+                return; // Hata oluşursa kodu çalıştırmayı durdur
+            }
+
+            // JavaScript kodunu çalıştır ve hataları terminalde göster
+            try {
+                new Function(jsCode)();  // JS kodunu çalıştır
+            } catch (error) {
+                terminal.textContent += "JavaScript Hata: " + error.message;  // Hata mesajını terminalde göster
+                return;  // Hata oluşursa devam etme
+            }
+
+            // PHP kısmı, HTML içerisinde çalıştırılamaz, bu yüzden sadece terminalde hata verir
+            terminal.textContent += "PHP kodu burada çalıştırılamaz. Lütfen PHP sunucusunda test edin.\n";
+
+            // Eğer hiçbir hata yoksa terminalde başarılı mesajı göster
+            terminal.textContent += "Kod başarıyla çalıştı.\n";
+        }
+    </script>
+</body>
+</html>

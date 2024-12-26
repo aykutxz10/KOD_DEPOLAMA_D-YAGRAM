@@ -1,0 +1,73 @@
+/* Genel Stil Ayarları */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #121212; /* Siyah arka plan */
+    color: #fff; /* Beyaz yazı rengi */
+}
+
+/* Konteyner düzeni */
+.container {
+    width: 80%;
+    max-width: 900px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: #1f1f1f; /* Koyu gri arka plan */
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Hafif gölge efekti */
+}
+
+/* Başlıklar */
+h1 {
+    font-size: 3rem;
+    text-align: center;
+    margin-bottom: 20px;
+    color: #ff6347; /* Canlı kırmızı başlık */
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+h2 {
+    font-size: 1.5rem;
+    color: #ffd700; /* Sarı renkli alt başlık */
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+/* Dosya listesi */
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+li {
+    background-color: #333;
+    margin: 10px 0;
+    padding: 10px;
+    border-radius: 8px;
+    transition: background-color 0.3s ease;
+}
+
+li:hover {
+    background-color: #444; /* Hover efekti ile renk değişimi */
+}
+
+a {
+    text-decoration: none;
+    color: #1e90ff; /* Mavi renkli bağlantılar */
+    font-size: 1.2rem;
+    display: block;
+    text-align: center;
+}
+
+a:hover {
+    color: #00bfff; /* Hover durumunda daha açık mavi */
+}
+
+/* Dosya bulunamadı mesajı */
+p {
+    text-align: center;
+    font-size: 1.1rem;
+    color: #ff4500; /* Kırmızımsı turuncu, hata mesajı rengi */
+}

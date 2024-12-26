@@ -1,0 +1,136 @@
+/* Genel Ayarlar */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #000000; /* Siyah arka plan */
+    color: #ffe7e7; /* Beyaz metin rengi */
+    line-height: 1.6;
+}
+
+/* Konteyner */
+.container {
+    width: 80%;
+    max-width: 900px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: #2e2e2e; /* Koyu gri arka plan */
+    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.5); /* Daha güçlü gölge */
+    border-radius: 8px;
+    text-align: center;
+}
+
+/* Başlık */
+h1 {
+    font-size: 2.5em;
+    color: #fff; /* Beyaz başlık rengi */
+    margin-bottom: 20px;
+    text-transform: uppercase; /* Başlıkların büyük harfli olması */
+    letter-spacing: 2px; /* Harfler arasında boşluk */
+}
+
+/* Form elemanları stil */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px; /* Form elemanları arasında daha fazla boşluk */
+}
+
+label {
+    font-size: 1.2em;
+    color: #ccc; /* Gri etiket rengi */
+    text-transform: uppercase;
+}
+
+/* Giriş alanları stil */
+input[type="text"],
+input[type="file"],
+input[type="submit"] {
+    padding: 12px;
+    font-size: 1.1em;
+    border: 1px solid #444; /* Koyu gri kenarlık */
+    border-radius: 6px;
+    background-color: #333; /* Koyu gri arka plan */
+    color: #fff; /* Beyaz metin */
+    transition: all 0.3s ease;
+}
+
+input[type="text"]:focus,
+input[type="file"]:focus {
+    border-color: #f4f4f4; /* Focus olduğunda beyaz kenarlık */
+    outline: none;
+    background-color: #444; /* Koyu gri arka plan */
+}
+
+input[type="submit"] {
+    background-color: #e74c3c; /* Kırmızı buton */
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+input[type="submit"]:hover {
+    background-color: #c0392b; /* Hoverda koyu kırmızı */
+}
+
+/* Yüklenen dosyaların listesi */
+h2 {
+    margin-top: 40px;
+    color: #fff; /* Beyaz başlık */
+    font-size: 1.8em;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+ul li {
+    padding: 15px;
+    background-color: #070505; /* Koyu gri arka plan */
+    margin: 10px 0;
+    border-radius: 6px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3); /* Hafif gölge efekti */
+}
+
+ul li a {
+    text-decoration: none;
+    color: #ff1900; /* Kırmızı bağlantı rengi */
+    font-weight: bold;
+    font-size: 1.1em;
+}
+
+ul li a:hover {
+    color: #c0392b; /* Hoverda koyu kırmızı */
+    text-decoration: underline;
+}
+
+ul li small {
+    font-size: 0.9em;
+    color: #ddd; /* Gri küçük metin */
+}
+
+/* Hata mesajları */
+.error {
+    color: #e74c3c; /* Kırmızı hata mesajları */
+    font-weight: bold;
+    font-size: 1.2em;
+    margin-top: 20px;
+}
+
+/* Buton ve linkler */
+a {
+    text-decoration: none;
+    color: #e74c3c; /* Kırmızı renkli bağlantılar */
+    font-weight: bold;
+}
+
+a:hover {
+    color: #c0392b; /* Hoverda koyu kırmızı */
+}

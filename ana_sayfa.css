@@ -1,0 +1,108 @@
+/* Genel stil ayarları */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #000; /* Arka plan rengini siyah yap */
+    color: #fff; /* Metin rengini beyaz yap, siyah arka planla okunabilirlik sağlamak için */
+    margin: 0;
+    padding: 0;
+}
+
+h1 {
+    text-align: center;
+    color: #fff; /* Başlık rengini beyaz yap */
+    margin-top: 50px;
+}
+
+/* Konteyner ayarları */
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+
+/* Formlar bölümü */
+.forms {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+/* Giriş ve kayıt formlarının stil ayarları */
+form {
+    width: 100%;
+    padding: 20px;
+    border-radius: 8px;
+    background-color: #ffecec;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+} 
+
+/* Başlık stil */
+h2 {
+    text-align: center;
+    color: #444;
+    margin-bottom: 20px;
+}
+
+/* Form elemanları */
+label {
+    display: block;
+    margin-bottom: 8px;
+    color: #555;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+    background-color: #fff;
+}
+
+input[type="submit"] {
+    width: 100%;
+    padding: 12px;
+    font-size: 16px;
+    background-color: #4CAF50;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+input[type="submit"]:hover {
+    background-color: #45a049;
+}
+
+/* Formların altındaki hata mesajları */
+.error {
+    color: red;
+    font-size: 14px;
+    text-align: center;
+}
+
+/* Formların sağ ve sol boşlukları */
+.login-form, .register-form {
+    flex: 1;
+    min-width: 45%;
+}
+
+/* Responsive tasarım */
+@media (max-width: 768px) {
+    .forms {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .login-form, .register-form {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+}

@@ -1,0 +1,136 @@
+/* Genel stil ayarları */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #000; /* Arka plan rengini siyah yap */
+    color: #fff; /* Metin rengini beyaz yap */
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+}
+
+/* Başlık stil */
+h1 {
+    text-align: center;
+    color: #fff;
+    margin-top: 50px;
+    font-size: 36px;
+}
+
+/* Konteyner ayarları */
+.container {
+    max-width: 1000px; /* Maksimum genişlik */
+    margin: 40px auto; /* Yatayda ortalamak için otomatik margin */
+    padding: 40px;
+    background-color: #1a1a1a;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.3); /* Gölgeleme efekti */
+    border-radius: 12px; /* Yuvarlatılmış köşeler */
+    display: flex; /* Flexbox düzeni */
+    flex-direction: column; /* İçeriği dikey olarak hizala */
+    justify-content: center; /* Yatayda ortalama */
+    align-items: center; /* Dikeyde ortalama */
+}
+
+/* Formlar bölümü */
+.forms {
+    display: flex;
+    justify-content: space-between;
+    gap: 40px;
+    width: 100%;
+    flex-wrap: wrap; /* Formların ekran boyutuna göre taşmasını engelle */
+    margin-top: 30px;
+}
+
+/* Giriş ve kayıt formlarının stil ayarları */
+form {
+    width: 100%;
+    max-width: 420px; /* Form genişliği sınırlandırıldı */
+    padding: 25px;
+    border-radius: 10px;
+    background-color: #333;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+    border: 1px solid #444;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+h2 {
+    text-align: center;
+    color: #fff;
+    margin-bottom: 25px;
+    font-size: 24px;
+}
+
+/* Form elemanları */
+label {
+    display: block;
+    margin-bottom: 10px;
+    color: #ddd;
+    font-size: 16px;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"] {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 20px;
+    border: 1px solid #444;
+    border-radius: 8px;
+    font-size: 16px;
+    background-color: #222;
+    color: #fff;
+}
+
+input[type="submit"] {
+    width: 100%;
+    padding: 15px;
+    font-size: 18px;
+    background-color: #4CAF50;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-top: 10px;
+}
+
+input[type="submit"]:hover {
+    background-color: #45a049;
+}
+
+/* Formların altındaki hata mesajları */
+.error {
+    color: red;
+    font-size: 14px;
+    text-align: center;
+    margin-top: 10px;
+}
+
+/* Formların sağ ve sol boşlukları */
+.login-form, .register-form {
+    width: 100%;
+    max-width: 420px;
+    margin: 0 auto; /* Ortalamak için */
+}
+
+/* Responsive tasarım */
+@media (max-width: 768px) {
+    .forms {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .login-form, .register-form {
+        width: 90%; /* Ekran boyutuna göre daha geniş */
+        margin-bottom: 20px;
+    }
+
+    h1 {
+        font-size: 30px;
+    }
+
+    h2 {
+        font-size: 20px;
+    }
+}

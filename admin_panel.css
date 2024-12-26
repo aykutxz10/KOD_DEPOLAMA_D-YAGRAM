@@ -1,0 +1,194 @@
+/* Genel stil ayarları */
+body {
+    background-color: #000000; /* Arka plan siyah */
+    color: #ffffff; /* Yazı rengi beyaz */
+    font-family: Arial, sans-serif; /* Yazı tipi */
+    margin: 0;
+    padding: 0;
+}
+/* Logo stilini ayarlıyoruz */
+.logo-container {
+    position: absolute;
+    top: 10px; /* Üstten 10px aşağıda */
+    left: 350px; /* Soldan 10px içeriye */
+    z-index: 1000; /* Diğer içeriklerin üzerine yerleştirilmesi için */
+}
+
+.logo {
+    width: 180px; /* Logonun genişliğini belirleyin */
+    height: auto; /* Yükseklik otomatik olarak genişliğe göre ayarlanır */
+}
+
+h1, h2 {
+    text-align: center;
+    color: #ffffff; /* Başlıklar beyaz */
+    margin-top: 20px;
+}
+
+/* Başlık stilleri */
+h1 {
+    font-size: 2.5em;
+    margin-top: 50px;
+}
+
+h2 {
+    font-size: 2em;
+    margin-top: 30px;
+   
+    
+}
+.search-container {
+    position: absolute;
+    top: 100px; /* Üstten 10px aşağıda */
+    right: 170px; /* Sağdan 10px içeriye */
+    z-index: 1000; /* Arama kutusunun diğer içeriklerin üzerine çıkması için */
+}
+
+.search-input {
+    padding: 10px;
+    font-size: 16px;
+    width: 250px; /* Genişliği ayarlıyoruz */
+    border-radius: 4px;
+    border: 1px solid #ccc;
+}
+
+.search-button {
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #f44336;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-left: 10px;
+}
+
+.search-button:hover {
+    background-color: #d32f2f;
+}
+/* Tablo stilleri */
+table {
+    width: 80%;
+    margin: 0 auto;
+    border-collapse: collapse;
+    margin-bottom: 30px;
+    background-color: #333333; /* Tablo arka planı */
+}
+
+th, td {
+    padding: 12px;
+    text-align: center;
+    border: 1px solid #555555; /* Hücre kenarlığı */
+}
+
+th {
+    background-color: #444444; /* Başlık hücreleri arka planı */
+    color: #ffffff; /* Başlık yazı rengi */
+    font-size: 1.2em;
+}
+
+td {
+    color: #e0e0e0; /* Hücre yazı rengi */
+    font-size: 1.1em;
+}
+
+/* Silme işlemi linki */
+a {
+    color: #ff4d4d; /* Silme işlemi için kırmızı */
+    text-decoration: none;
+    font-weight: bold;
+}
+
+a:hover {
+    color: #ff0000; /* Link üzerine gelindiğinde daha parlak kırmızı */
+}
+
+/* Linklerin üzerine gelindiğinde daha dikkat çekici olması için */
+td a:hover {
+    text-decoration: underline;
+}
+
+/* İletişim mesajı (Silme sonrası) */
+.success-message, .error-message {
+    text-align: center;
+    font-size: 1.5em;
+    margin-top: 20px;
+}
+
+.success-message {
+    color: #4caf50; /* Başarı mesajı yeşil */
+}
+
+.error-message {
+    color: #f44336; /* Hata mesajı kırmızı */
+}
+
+/* Form ve input elemanları */
+input[type="text"], input[type="password"], input[type="submit"], button {
+    padding: 10px;
+    margin: 10px;
+    border-radius: 5px;
+    border: 1px solid #555555;
+    background-color: #222222;
+    color: #ffffff;
+    font-size: 1em;
+    cursor: pointer;
+}
+
+input[type="text"]:focus, input[type="password"]:focus {
+    background-color: #444444;
+    outline: none;
+}
+
+button {
+    background-color: #ff4d4d; /* Kırmızı buton */
+    color: #fff;
+}
+/* Çıkış butonu stilleri */
+/* Çıkış butonu stilleri */
+.logout-container {
+    text-align: center;
+    margin-top: 30px;
+}
+
+/* Çıkış butonunun görünümü */
+.logout-button {
+    display: inline-block;
+    background-color: #ffffff; /* Beyaz arka plan */
+    color: #f44336; /* Kırmızı yazı rengi */
+    padding: 20px 40px; /* Butonu büyük yapmak için padding */
+    font-size: 1.5em; /* Font boyutunu büyütmek */
+    font-weight: bold; /* Yazıyı kalın yapmak */
+    border: 2px solid #ffffff; /* Butonun kenarına kırmızı sınır eklemek */
+    border-radius: 12px; /* Yuvarlatılmış köşeler */
+    text-decoration: none; /* Link alt çizgisini kaldırmak */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Hafif gölge eklemek */
+    transition: background-color 0.3s ease, transform 0.3s ease; /* Yumuşak geçişler */
+}
+
+/* Butona hover efekti eklemek */
+.logout-button:hover {
+    background-color: #f44336; /* Hover durumunda kırmızı arka plan */
+    color: #ffffff; /* Yazı rengini beyaz yapmak */
+    transform: scale(1.05); /* Butonu biraz büyütmek */
+}
+
+
+button:hover {
+    background-color: #e60000; /* Buton üzerine gelindiğinde daha parlak kırmızı */
+}
+
+/* Responsive Design - Mobil uyumluluk */
+@media (max-width: 768px) {
+    table {
+        width: 100%;
+    }
+
+    th, td {
+        font-size: 1em;
+    }
+
+    h1, h2 {
+        font-size: 1.8em;
+    }
+}
